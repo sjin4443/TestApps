@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arclight Eye and Ear Care App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Onboarding Page -->
+<div id="onboarding" class="page active">
+  <div class="container">
+    <div class="card">
+      <h1>Welcome to Arclight</h1>
+      <input type="text" id="username" class="fixed-input" placeholder="Enter your name" />
+      <select id="job">
+        <option disabled selected>What are you working as?</option>
+        <option>Audiologist</option>
+        <option>Community Health Worker</option>
+        <option>Dermatologist</option>
+        <option>Ear Care Practitioner</option>
+        <option>ENT Specialist</option>
+        <option>General Practitioner</option>
+        <option>Hopital Doctor</option>
+        <option>Medical Student</option>
+        <option>Nurse</option>
+        <option>Ophthalmic Clinical Officer</option>
+        <option>Ophthalmologist</option>
+        <option>Optometrist</option>
+        <option>Orthoptist</option>
+        <option>Pharmacist</option>
+        <option>Physician Associate</option>
+      </select>
+      <select id="language">
+        <option disabled selected>What's your preferred language?</option>
+        <option>English</option>
+        <option>Afrikaans</option>
+        <option>Amharic</option>
+        <option>Arabic</option>
+        <option>Bengali</option>
+        <option>Berber</option>
+        <option>French</option>
+        <option>Fula</option>
+        <option>German</option>
+        <option>Hausa</option>
+        <option>Hindi</option>
+        <option>Igbo</option>
+        <option>Indonesian</option>
+        <option>Italian</option>
+        <option>Japanese</option>
+        <option>Kinyarwanda</option>
+        <option>Korean</option>
+        <option>Lingala</option>
+        <option>Mandarin Chinese</option>
+        <option>Marathi</option>
+        <option>Oromo</option>
+        <option>Portuguese</option>
+        <option>Russian</option>
+        <option>Shona</option>
+        <option>Somali</option>
+        <option>Spanish</option>
+        <option>Standard Arabic</option>
+        <option>Swahili</option>
+        <option>Telugu</option>
+        <option>Thai</option>
+        <option>Tigrinya</option>
+        <option>Tswana</option>
+        <option>Turkish</option>
+        <option>Urdu</option>
+        <option>Vietnamese</option>
+        <option>Wolof</option>
+        <option>Xhosa</option>
+        <option>Yoruba</option>
+        <option>Zulu</option>
+      </select>
+      <select id="location">
+        <option disabled selected>Where are you located at?</option>
+        <option>Algeria</option>
+        <option>Bangladesh</option>
+        <option>Brazil</option>
+        <option>China</option>
+        <option>DR Congo</option>
+        <option>Egypt</option>
+        <option>Ethiopia</option>
+        <option>France</option>
+        <option>Germany</option>
+        <option>Ghana</option>
+        <option>India</option>
+        <option>Indonesia</option>
+        <option>Iran</option>
+        <option>Japan</option>
+        <option>Kenya</option>
+        <option>Mexico</option>
+        <option>Morocco</option>
+        <option>Nigeria</option>
+        <option>Pakistan</option>
+        <option>Philippines</option>
+        <option>Russia</option>
+        <option>South Africa</option>
+        <option>Sudan</option>
+        <option>Tanzania</option>
+        <option>Thailand</option>
+        <option>Turkey</option>
+        <option>UK</option>
+        <option>Uganda</option>
+        <option>United States</option>
+        <option>Vietnam</option>
+        <option>Zambia</option>
+        <option>Zimbabwe</option>
+      </select>
+      <select id="interest">
+        <option disabled selected>What is your interest?</option>
+        <option>Diagnosing eye diseases</option>
+        <option>Improving ear screening methods</option>
+        <option>Skin lesion recognition</option>
+        <option>Medical education for students</option>
+        <option>Fieldwork and rural diagnosis</option>
+        <option>Training community workers</option>
+        <option>Improving patient communication</option>
+        <option>Low-resource device usage</option>
+      </select>
+      <button onclick="completeOnboarding()">Join Us!</button>
+    </div>
+  </div>
+</div>
+
+<!-- Module Selector -->
+<div id="selectModule" class="page">
+  <div class="container">
+    <div class="card">
+      <h1>Learn About...</h1>
+      <button onclick="goToDashboard()">Eyes</button>
+      <button disabled>Ears</button>
+      <button disabled>Skin</button>
+      <p class="note">*Please note that only Eye module is available at the moment</p>
+    </div>
+  </div>
+</div>
+
+<!-- Eye Dashboard -->
+<div id="dashboard" class="page">
+  <div class="container">
+    <h1>Eyes</h1>
+    <input class="search-bar full-width" type="text" placeholder="Search courses..." />
+    <div class="vertical-menu">
+      <button onclick="showLearningModules()">Learning Modules</button>
+      <button disabled>Training Modules</button>
+      <button disabled>Quizzes & Review</button>
+      <button onclick="showAtomsCard()">Atoms Card</button>
+    </div>
+    <p class="note">*Only Learning Modules available at the moment</p>
+    <div class="map-section">
+      <p class="note">More to be added below.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Learning Modules -->
+<div id="learningModules" class="page">
+  <div class="container">
+    <h1>Learning Modules</h1>
+
+    <!-- History Taking -->
+    <div class="module-card" style="background-color: #777; color: white;">
+      <div style="width: 80px; height: 80px; background: white; border-radius: 8px; margin-right: 12px;"></div>
+      <div class="module-info">
+        <h3>History Taking</h3>
+        <p style="color: white;">To be added</p>
+        <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+        <span class="status" style="color: white;">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- Visual Acuity -->
+    <div class="module-card" style="background-color: #777; color: white;">
+      <div style="width: 80px; height: 80px; background: white; border-radius: 8px; margin-right: 12px;"></div>
+      <div class="module-info">
+        <h3>Visual Acuity</h3>
+        <p style="color: white;">To be added</p>
+        <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+        <span class="status" style="color: white;">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- Pupils -->
+    <div class="module-card" style="background-color: #777; color: white;">
+      <div style="width: 80px; height: 80px; background: white; border-radius: 8px; margin-right: 12px;"></div>
+      <div class="module-info">
+        <h3>Pupils</h3>
+        <p style="color: white;">To be added</p>
+        <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+        <span class="status" style="color: white;">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- Anterior Segment Module Card -->
+    <div class="module-card" id="anteriorSegmentCard" style="cursor:pointer;">
+      <img src="images/case1_eye.png" alt="Anterior Segment" />
+      <div class="module-info">
+        <h3>Anterior Segment</h3>
+        <p>Quiz Based Learning</p>
+        <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+        <span class="status">Start!</span>
+      </div>
+    </div>
+
+    <!-- Front of Eye -->
+    <div class="module-card" style="background-color: #777; color: white;">
+      <div style="width: 80px; height: 80px; background: white; border-radius: 8px; margin-right: 12px;"></div>
+      <div class="module-info">
+        <h3>Front of Eye</h3>
+        <p style="color: white;">To be added</p>
+        <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+        <span class="status" style="color: white;">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- Fundal Reflex -->
+    <div class="module-card" style="background-color: #777; color: white;">
+      <div style="width: 80px; height: 80px; background: white; border-radius: 8px; margin-right: 12px;"></div>
+      <div class="module-info">
+        <h3>Fundal Reflex</h3>
+        <p style="color: white;">To be added</p>
+        <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+        <span class="status" style="color: white;">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- Fundoscopy -->
+    <div class="module-card" style="background-color: #777; color: white;">
+      <div style="width: 80px; height: 80px; background: white; border-radius: 8px; margin-right: 12px;"></div>
+      <div class="module-info">
+        <h3>Fundoscopy</h3>
+        <p style="color: white;">To be added</p>
+        <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+        <span class="status" style="color: white;">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- Direct Ophthalmoscopy -->
+    <div class="module-card" id="ophthalmoscopyCard">
+      <img src="images/arclight_device.png" alt="Direct Ophthalmoscopy">
+      <div class="module-info">
+        <h3>Direct Ophthalmoscopy</h3>
+        <p>Video Learning | Quiz Available</p>
+        <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+        <span class="status">Start!</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- Direct Ophthalmoscopy Embedded Module -->
+<div id="directOphthalmoscopy" class="page">
+  <div class="container">
+    <div class="header">
+      <button id="backBtn">←</button>
+      <h3>Direct Ophthalmoscopy</h3>
+    </div>
+    <div class="video-container">
+      <iframe id="ytplayer"
+        src="https://www.youtube.com/embed/rG99iRufXfU?enablejsapi=1"
+        title="Direct Ophthalmoscopy"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <div class="toolbar">
+      <button id="timestampBtn">☰</button>
+      <button id="noteBtn">Aa</button>
+      <button id="folderBtn">📁</button>
+      <button id="infoBtn">🔹</button>
+    </div>
+    <div class="content-box" id="contentBox">
+      <h4>Additional Information</h4>
+      <p>This video shows step-by-step instructions on how to make a pad and shield for eye protection.</p>
+    </div>
+    <button class="quiz-btn" id="quizBtn">Take Quiz</button>
+  </div>
+</div>
+
+<!-- Atoms Card Page -->
+<div id="atomsCardPage" class="page">
+  <!-- Top-right icons container -->
+  <div class="top-right-icons">
+    <button id="backToEyesBtn" title="Back to Eyes">⬆</button>
+    <button id="tocToggleBtn" title="Table of Contents">☰</button>
+  </div>
+
+  <!-- TOC Dropdown -->
+  <div id="tocDropdown" class="toc-dropdown hidden">
+    <div class="toc-tab">
+      <button onclick="showTOC('eyes')">Eyes</button>
+      <button onclick="showTOC('ears')">Ears</button>
+    </div>
+    <ul id="tocList"></ul>
+  </div>
+
+  <!-- Direct image display without rotation -->
+  <div style="width: 100vw; height: 100vh; overflow: hidden; display: flex; justify-content: center; align-items: center;" id="atomsImageContainer">
+  <img 
+    src="images/Summary.png" 
+    alt="Summary" 
+    style="
+      max-width: 100vh;  /* Because rotated, height acts as width */
+      max-height: 100vw;
+      transform: rotate(90deg);
+      border-radius: 12px;
+      object-fit: contain;
+    " 
+  />
+</div>
+</div>
+
+<!-- Anterior Segment Quiz Iframe Page -->
+<div id="anteriorSegmentQuizPage" class="page">
+  <button id="quizBackBtn">← Back</button>
+  <iframe 
+    src="../Anterior Segment Quiz/html/index.html" 
+    style="width: 100%; height: 90vh; border: none;" 
+    title="Anterior Segment Quiz">
+  </iframe>
+</div>
+
+
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="script.js"></script>
+<script>
+  function showAtomsCard() {
+    showPage('atomsCardPage');
+  }
+</script>
+
+<!-- Bottom fixed home button container -->
+<div id="homeButtonContainer" style="
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4000;
+">
+  <button id="homeBtn" style="
+    background: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    padding: 0;
+    transform: scale(0.7);
+  " title="Home (Eyes Dashboard)" aria-label="Home button">
+    <!-- Line art SVG icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+      <path d="M3 9l9-7 9 7"></path>
+      <path d="M9 22V12h6v10"></path>
+    </svg>
+  </button>
+</div>
+
+
+
+</body>
+</html>
